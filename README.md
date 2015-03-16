@@ -1,2 +1,0 @@
-# userscripts
-==UserScript==
