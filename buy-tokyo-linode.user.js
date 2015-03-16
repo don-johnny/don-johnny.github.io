@@ -2,7 +2,7 @@
 // @name           Buy Tokyo Linode
 // @namespace      Buy Tokyo Linode
 // @description    Buy Tokyo Linode
-// @match					 https://manager.linode.com/linodes/add*
+// @match          https://manager.linode.com/linodes/add*
 // @version        0.1
 // @grant          none
 // @copyright      don-johnny
@@ -27,7 +27,7 @@ function refreshJ()
 function buyTokyoNode() {
   try {
     //1G Linode Plan
-    var buyPlan = linode1024.4;
+    var buyPlan = 'linode1024.4';
     document.getElementById(buyPlan).checked = true;
     //Tokyo datacenter ID
     var doc_dcID = document.getElementById('DatacenterID');
