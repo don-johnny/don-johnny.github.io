@@ -3,7 +3,7 @@
 // @namespace      Buy Tokyo Linode
 // @description    Buy Tokyo Linode
 // @match          https://manager.linode.com/linodes/add*
-// @version        0.1
+// @version        0.2
 // @grant          none
 // @copyright      don-johnny
 // @updateURL      https://github.com/don-johnny/UserScripts/raw/master/buy-linode-tokyo.user.js
@@ -28,7 +28,9 @@ function buyTokyoNode() {
   try {
     //1G Linode Plan
     var buyPlan = 'linode1024.4';
-    document.getElementById(buyPlan).checked = true;
+    var doc_buyPlan = document.getElementById(buyPlan);
+    //trick : show if the script working.
+    doc_buyPlan.checked = (Math.random() < 0.5) ? true : false;
     //Tokyo datacenter ID
     var doc_dcID = document.getElementById('DatacenterID');
     var tokyodcID = 8;
@@ -37,8 +39,9 @@ function buyTokyoNode() {
     if (isTokyoNodeOnsale)
     {
       //on sale.
+      doc_buyPlan.checked = true;
       doc_dcID.value = tokyodcID;
-      document.getElementById('signup').submit()
+      document.getElementById('signup').submit();
     } 
     else
     {
