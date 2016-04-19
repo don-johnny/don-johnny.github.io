@@ -1,2 +1,2 @@
 # don-johnny.github.io
-== g.tinker.tk ==
+== g.tinkernels.com ==
